@@ -57,7 +57,8 @@ Tras realizar la exploración con `ydata-profiling`, se identificaron los siguie
 
 - `Arango_Isabela_EA1.pdf`: Informe detallado del proyecto.
 - `social_media_user_behavior.csv`: Dataset original utilizado.
-- `Analisis_Exploratorio.ipynb`: Notebook de Jupyter con el código de exploración.
+- `Arango_Isabela_EA1.ipynb`: Notebook de Jupyter con el código de exploración.
+- `exploracion_datos.ipynb`: HTML generado a partir de la exploración de datos con pandas.
 - `README.md`: Descripción general del proyecto (este archivo).
 
 ---
