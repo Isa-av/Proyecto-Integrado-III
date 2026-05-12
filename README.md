@@ -1,6 +1,6 @@
 # Análisis de Comportamiento y Bienestar en Redes Sociales 📱🧠
 
-Este repositorio contiene la **Evidencia de Aprendizaje 1** para el proyecto de Analítica de Datos. El objetivo principal es investigar la relación entre los hábitos de consumo en redes sociales y el bienestar emocional de los usuarios mediante el análisis de un dataset sintético de 2,000 registros.
+Este repositorio contiene el avance del proyecto de Analítica de Datos, enfocado en investigar la relación entre los hábitos de consumo digital y el bienestar emocional. Actualmente incluye la **Evidencia de Aprendizaje 2: Limpieza y Transformación de Datos**.
 
 ## 📋 Descripción del Proyecto
 
@@ -11,54 +11,46 @@ El proyecto aborda la problemática de la falta de mecanismos de detección temp
 
 ---
 
+## 🛠️ Fase actual: Limpieza y Transformación (EA2)
+
+En esta etapa se procesó el dataset original para asegurar la calidad de la información. Los pasos técnicos realizados fueron:
+
+1. **Ajuste de Tipos de Datos:** Conversión de fechas a `datetime64` y variables de texto a `category` para optimizar memoria.
+2. **Tratamiento de Outliers:** Aplicación de **Winsorización** en la duración de sesiones, topando los valores extremos en 111.54 minutos para evitar sesgos en los promedios.
+3. **Estandarización:** Creación de la variable `mood_category` simplificando los estados de ánimo en categorías de sentimiento (**Positivo, Neutral y Negativo**).
+4. **Cambio de Granularidad:** Agregación de datos por plataforma y sentimiento para obtener una visión estratégica del comportamiento grupal.
+
+---
+
 ## 📊 Estructura del Dataset
 
-El análisis se basa en el *Social Media User Behavior Dataset*, el cual cuenta con las siguientes especificaciones:
-- **Registros:** 2,000 usuarios únicos.
-- **Variables:** 34 (Demográficas, de uso, compromiso, salud mental y comercio).
-- **Calidad de datos:** 100% de integridad (sin valores nulos ni duplicados).
+El análisis utiliza el *Social Media User Behavior Dataset* de Kaggle (2,000 registros).
 
 ### Variables Críticas Analizadas:
 | Variable | Descripción |
 | :--- | :--- |
 | `daily_usage_hours` | Horas diarias de uso de redes sociales. |
 | `self_reported_mental_health_score` | Puntuación de salud mental (1-10). |
-| `sleep_disruption` | Nivel de afectación en el sueño. |
-| `mood_while_scrolling` | Estado emocional predominante. |
-
----
-
-## 🚀 Hallazgos Principales (Exploración de Datos)
-
-Tras realizar la exploración con `ydata-profiling`, se identificaron los siguientes patrones:
-
-1. **Patrones de Sesión:**
-   - Existe una **fuerte correlación positiva (r = 0.785)** entre el uso diario total y la duración de las sesiones individuales.
-   - Se identificó una **correlación inversa (r = -0.587)** entre la cantidad de sesiones y su duración, distinguiendo perfiles de "usuarios maratón" frente a "usuarios frecuentes".
-
-2. **Impacto en Salud Mental:**
-   - Sorprendentemente, la correlación lineal entre el tiempo de uso y el score de salud mental es casi nula (**0.019**). Esto sugiere que el bienestar depende más de variables cualitativas (cómo se usa la app) que de variables cuantitativas (cuánto tiempo).
-
-3. **Métricas de Éxito:**
-   - Se definió el **Puntaje de Alerta de Bienestar (PAB)** para monitorear usuarios con uso >5h y score de salud <5.
+| `avg_session_duration_min` | Duración promedio de cada sesión (Datos Limpios). |
+| `mood_category` | Categoría de sentimiento (Positivo, Neutral, Negativo). |
 
 ---
 
 ## 🛠️ Tecnologías Utilizadas
 
 - **Lenguaje:** Python 3.x
-- **Librerías de Análisis:** `Pandas`, `NumPy`
-- **Exploración Automática:** `ydata-profiling` (Pandas Profiling)
+- **Librerías:** `Pandas`, `NumPy`, `Matplotlib`, `Seaborn`
 - **Gestión del Proyecto:** Trello (Metodología Kanban)
 
 ---
 
 ## 📁 Contenido del Repositorio
 
-- `Arango_Isabela_EA1.pdf`: Informe detallado del proyecto.
+- `Arango_Isabela_EA2.pdf`: Informe detallado del proyecto.
 - `social_media_user_behavior.csv`: Dataset original utilizado.
-- `Arango_Isabela_EA1.ipynb`: Notebook de Jupyter con el código de exploración.
-- `exploracion_datos.ipynb`: HTML generado a partir de la exploración de datos con pandas.
+- `Arango_Isabela_EA2.ipynb`: Notebook de Jupyter con el código de exploración.
+- `exploracion_datos.html`: HTML generado a partir de la exploración de datos con pandas.
+- `Arango_Isabela_EA2_Limpio.csv`: Dataset final procesado listo para el análisis estadístico.
 - `README.md`: Descripción general del proyecto (este archivo).
 
 ---
