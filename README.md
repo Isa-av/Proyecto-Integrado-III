@@ -38,7 +38,7 @@ El análisis utiliza el *Social Media User Behavior Dataset* de Kaggle (2,000 re
 - `Arango_Isabela_EA2.ipynb`: Notebook de Jupyter con el código de exploración.
 - `Arango_Isabela_EA2_Limpio.csv`: Dataset final procesado listo para el análisis estadístico.
 - `Arango_Isabela_EA3.pbix`: Dashboard del proyecto.
-- `Arango_Isabela_EA3.pdf`: Informe detallado del proyecto.
+- `Arango_Isabela_ProyectoIntegrador.pdf`: Informe detallado del proyecto.
 - `README.md`: Descripción general del proyecto (este archivo).
 - `exploracion_datos.html`: HTML generado a partir de la exploración de datos con pandas.
 - `social_media_user_behavior.csv`: Dataset original utilizado.
